@@ -13,7 +13,14 @@ body {
 
 .main {
     width: 60%;
+    height: 60%;
     margin: 0 auto;
+}
+
+.main img {
+    margin-top: 2%;
+    margin-left: 30%;
+    width: 50%;
 }
 
 .main-title {
@@ -43,15 +50,12 @@ body {
     color: orangered;
 }
 
-.accord-title:after {
+.accord-title::after {
     content: "";
     display: block;
-
     border-style: solid;
     border-width: 8px 5px 0 5px;
-    border-color: rgb(0 0 0 / 87%) 
-    transparent transparent 
-    transparent;
+    border-color: rgb(0 0 0 / 87%) transparent transparent transparent;
 
     position: absolute;
     top: 50%;
@@ -69,27 +73,23 @@ body {
     color:rgb(0 0 0 / 87%);
 }
 
-.accord-input:hover ~ .accord-inf {
-    width: 100%;
-    height: 100%;
-    transition: 0.5s;
-    opacity: 1;
-    margin-bottom: 1.5rem;
+.accord-input:checked ~ .accord-inf {
     display: block;
 }
 
 .accord-item {
     margin-bottom: 1em;
 }
-.accord-input:checked ~ .accord-title:after { 
-    color: #fff;
-    display: block;
-}
 
-.accord-input:checked ~ .accord-title:after {
+.accord-input:checked ~ .accord-inf::after {
     border-style: solid;
     border-width: 0 5px 8px 5px;
-    border-color: transparent transparent #000000 transparent;
+    border-color: transparent transparent #000000 transparent
+}
+
+.accord-input:hover ~ .accord-inf {
+    transition: .5s;
+    display: block;
 }
 
 
