@@ -34,6 +34,7 @@ body {
 .accord {
     max-width: 100%;
     margin: 5em auto;
+    min-height: 4rem;
 }
 
 .accord-inf {
@@ -50,7 +51,7 @@ body {
     color: orangered;
 }
 
-.accord-title::after {
+.accord-title::before {
     content: "";
     display: block;
     border-style: solid;
@@ -88,8 +89,12 @@ body {
 }
 
 .accord-input:hover ~ .accord-inf {
-    transition: .5s;
     display: block;
+}
+
+.accord-input:hover ~ .accord-inf::after {
+    transform: scaleX(1);
+    transition: 0.5s;
 }
 
 
