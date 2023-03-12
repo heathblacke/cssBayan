@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    background-color: rgb(255, 245, 233);
+}
+
+.main {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.main-title {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* accord */
+
+.accord {
+    max-width: 100%;
+    margin: 5em auto;
+}
+
+.accord-inf {
+    display: none;
+
+}
+
+.accord-title {
+    display: block;
+    cursor: pointer;
+    transition: color .2s
+    ease-out;
+    position: relative;
+    color: orangered;
+}
+
+.accord-title:after {
+    content: "";
+    display: block;
+
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: rgb(0 0 0 / 87%) 
+    transparent transparent 
+    transparent;
+
+    position: absolute;
+    top: 50%;
+    right: 0.05em;
+
+    transform: translateY(-50%);
+}
+
+.accord-input {
+    appearance: none;
+    position: absolute;
+}
+
+.accord-title:hover {
+    color:rgb(0 0 0 / 87%);
+}
+
+.accord-input:hover ~ .accord-inf {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    opacity: 1;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.accord-item {
+    margin-bottom: 1em;
+}
+.accord-input:checked ~ .accord-title:after { 
+    color: #fff;
+    display: block;
+}
+
+.accord-input:checked ~ .accord-title:after {
+    border-style: solid;
+    border-width: 0 5px 8px 5px;
+    border-color: transparent transparent #000000 transparent;
+}
+
+
+
+
+
+
