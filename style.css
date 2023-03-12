@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    background-color: rgb(255, 245, 233);
+    font-size: 16px;
+}
+
+.main {
+    width: 60%;
+    height: 60%;
+    margin: 0 auto;
+}
+
+.main img {
+    margin-top: 2%;
+    margin-left: 30%;
+    width: 50%;
+}
+
+.main-title {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* accord */
+
+.accord {
+    max-width: 100%;
+    margin: 5em auto;
+    min-height: 4rem;
+}
+
+.accord-inf {
+    display: none;
+
+}
+
+.accord-title {
+    display: block;
+    cursor: pointer;
+    transition: color .2s
+    ease-out;
+    position: relative;
+    color: orangered;
+}
+
+.accord-title::before {
+    content: "";
+    display: block;
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: rgb(0 0 0 / 87%) transparent transparent transparent;
+
+    position: absolute;
+    top: 50%;
+    right: 0.05em;
+
+    transform: translateY(-50%);
+}
+
+.accord-input {
+    appearance: none;
+    position: absolute;
+}
+
+.accord-title:hover {
+    color:rgb(0 0 0 / 87%);
+}
+
+.accord-input:checked ~ .accord-inf {
+    display: block;
+}
+
+.accord-item {
+    margin-bottom: 1em;
+}
+
+.accord-input:checked ~ .accord-inf::after {
+    border-style: solid;
+    border-width: 0 5px 8px 5px;
+    border-color: transparent transparent #000000 transparent
+}
+
+.accord-input:hover ~ .accord-inf {
+    display: block;
+}
+
+.accord-input:hover ~ .accord-inf::after {
+    transform: scaleX(1);
+    transition: 0.5s;
+}
+
+@media (max-width: 1920px) and (min-width: 821px) {
+    .body {
+        font-family: 'Roboto Mono', monospace;
+        font-weight: 300;
+        background-color: rgb(255, 245, 233);
+        font-size: 14px;
+    }
+
+    @media (max-width: 820px) { 
+        .body {
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 400;
+            background-color: rgb(255, 245, 233);
+            font-size: 12px;
+        }
+    }
+
+    @media (max-width: 320px) { 
+        .body {
+        font-family: 'Roboto Mono', monospace;
+            font-weight: 400;
+            background-color: rgb(255, 245, 233);
+            font-size: 14px;
+        }
+    }
+}
+
+
+
